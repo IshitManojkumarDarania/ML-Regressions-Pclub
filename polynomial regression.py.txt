@@ -27,7 +27,7 @@ def error(phi, X, y):
 #generating the regression for decreasing gradient
 val = 0.1
 losses = []
-for _ in range(500):
+for _ in range(1000):
   phi = phi - val * (1/m) * (X.T @ ((X @ phi) - y))
   losses.append(error(phi, X, y))
 predval = generator(X, phi)
