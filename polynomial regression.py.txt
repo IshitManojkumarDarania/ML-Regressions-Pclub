@@ -7,6 +7,7 @@ X = np.array([[1, 5, 10, 13, 16, 20, 25, 30, 41, 52]]).T
 y = np.array([430, 514, 612, 833, 1133, 1540, 2023, 3040, 5001, 10023])
 m, n = X.shape
 #adding columns of powers to X inturn giving polynomial features to it
+#to increase the degree of polynomial regression just add another column to it of the corresponding power and update phi
 X = np.hstack((np.ones((m, 1)), X))
 X = np.hstack((
     X,
